@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.product-top-container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    .inner-top-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.product-top-list-container{
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    text-transform: uppercase;
+            
+}
+.product-top-heading{
+    font-size: 25px;
+    font-family: "Noto Sans", serif;
+    font-weight: 600;
+    padding-bottom: 35px;
+    text-transform: uppercase;
+    
+}
+
+.product-category-name{
+    font-size: 12px;
+    letter-spacing: 0.3rem;
+    font-weight: 450;
+}
+
+.product-top-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Noto Sans', serif;
+    h1{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+.product-top-image{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px){
+    .product-top-container{
+        display: flex;
+        height: auto;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .inner-top-container{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .product-top-list-container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .product-top-heading{
+        font-size: 20px;
+        letter-spacing: 0.3rem;
+        
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .product-top-container{
+        display: flex;
+        height: auto;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .inner-top-container{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .product-top-list-container{
+        position: relative;
+    }
+  
+}

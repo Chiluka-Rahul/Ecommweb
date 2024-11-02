@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.product-header-container {
+    display: flex;
+    width: 100%;    
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 25px;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    background-color: rgb(52, 52, 52);
+}
+
+.input-search {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    border: 1px solid rgb(171, 168, 168);
+}
+
+.product-header-ulist {
+    display: flex;
+    gap: 25px;
+}
+
+
+
+.category-button {
+    font-weight: 400;
+    padding: 12px 20px;
+    letter-spacing: 0.8px;
+    border-width: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Noto Sans', serif;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #000000, #363636);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.product-header-ulist .category-button.active-button {
+    color: #000000;
+    border: 2px solid black;
+    background: linear-gradient(45deg, #e3e3e3, #d5d5d5);
+}
+
+
+
+
+@media (max-width: 768px){
+    .product-header-container{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow: hidden;
+        top: 55px;
+    }
+    .product-header-ulist {
+        display: flex;
+        justify-content: flex-start;
+        overflow-y:hidden;
+        overflow-x: scroll;
+        gap: 25px;
+    }
+
+    .product-header-ulist::-webkit-scrollbar {
+        height: 8px; 
+    }
+    
+    .product-header-ulist::-webkit-scrollbar-thumb {
+        background-color: #888; 
+        border-radius: 10px;
+    }
+    
+    .product-header-ulist::-webkit-scrollbar-thumb:hover {
+        background-color: #555; 
+    }
+    .category-button {
+        font-size: 10px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .product-header-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        top: 65px;
+    }
+    .product-header-ulist {
+        display: flex;
+        justify-content: flex-start;
+        overflow-y:hidden;
+        overflow-x: scroll;
+        gap: 25px;
+    }
+
+    .product-header-ulist::-webkit-scrollbar {
+        height: 8px; 
+    }
+    
+    .product-header-ulist::-webkit-scrollbar-thumb {
+        background-color: #888; 
+        border-radius: 10px;
+    }
+    
+    .product-header-ulist::-webkit-scrollbar-thumb:hover {
+        background-color: #555; 
+    }
+    .category-button {
+        font-size: 10px;
+    }
+}

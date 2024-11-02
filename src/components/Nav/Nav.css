@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.nav-container{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* width: 100%; */
+        padding: 18px 30px 18px 30px;
+        color: black;
+        background-color:  transparent;
+        backdrop-filter: blur(10px);
+        .Image{
+            width: 3.2vw;
+            height: 6vh;
+        }
+        .brand-heading a{
+            font-size: 18px;
+            font-family: "Noto Sans", serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+        .list-menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            cursor: pointer;
+            font-size: 15px;
+            letter-spacing: 0.8px;
+            position: relative;
+            .cart-btn a{
+                position: relative;
+                right: 125px;
+                text-decoration: none;
+                color: black;
+                list-style: none;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.text-hover{
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+
+}
+.inline-span{
+    display: inline-block;
+}
+.another-text{
+    position: absolute;
+    inset: 0;
+}
+
+
+.btn-cnt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    .background-menu{
+        position: relative;
+        width: 380px;
+        height: 650px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 25px;
+        overflow: hidden;
+    }
+}
+
+.menu-button-container{
+    height: 40px;
+    width: 100px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    .slider-up-cnt{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .el{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(167, 255, 96);
+            text-transform: uppercase;
+            &:nth-of-type(2){
+                position: absolute;
+                top: 100%;
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 253, 253);
+                border: 2px dashed white;
+                border-radius: 25px;
+            }
+            &:hover{
+                .perspective-text{
+                    transform: rotateX(90deg);
+                    p{
+                        &:nth-of-type(1){
+                            transform: translateY(-100%);
+                            opacity: 0;
+                        }
+                        &:nth-of-type(2){
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .perspective-text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+        transform-style: preserve-3d;
+        p{
+            transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+            &:nth-of-type(2){
+                position: absolute;
+                transform: rotateX(-90deg) translateY(9px);
+                transform-origin: bottom center;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .nav-container{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 101;
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 30px 18px 30px;
+            color: black;
+            background-color:  transparent;
+            backdrop-filter: blur(10px);
+            .Image{
+                display: none;
+            }
+            .brand-heading a{
+                font-size: 15px;
+                font-family: "Noto Sans", serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+            .list-menu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 35px;
+                cursor: pointer;
+                font-size: 15px;
+                letter-spacing: 0.8px;
+                position: relative;
+                left: 0;
+                .cart-btn{
+                    display: none;
+                }
+            }
+        }
+    } 
+    .btn-cnt{
+        position: absolute;
+        top: -10px;
+        right: -25px;
+        /* padding-bottom: 10px; */
+        font-size: 12px;
+        .background-menu{
+            position: relative;
+            width: 380px;
+            height: 650px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+        }
+    } 
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .nav-container{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 101;
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 30px 18px 30px;
+            color: black;
+            background-color:  transparent;
+            backdrop-filter: blur(10px);
+            .Image{
+                width: 4vw;
+                height: 4vh;
+            }
+            .brand-heading a{
+                font-size: 13px;
+                font-family: "Noto Sans", serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+            .list-menu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 35px;
+                cursor: pointer;
+                font-size: 12px;
+                letter-spacing: 0.8px;
+                position: relative;
+                left: 0;
+                .cart-btn a{
+                    position: relative;
+                    right: 125px;
+                    text-decoration: none;
+                    color: black;
+                    list-style: none;
+                    font-weight: 600;
+                }
+            }
+        }
+    }  
+}
