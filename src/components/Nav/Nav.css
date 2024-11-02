@@ -135,6 +135,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 15px;
         transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
         transform-style: preserve-3d;
         p{
@@ -218,6 +219,10 @@
             border-radius: 25px;
             overflow: hidden;
         }
+    }
+    .perspective-text{
+        font-size: 12px !important;
+
     }
 }
 
