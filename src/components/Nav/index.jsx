@@ -48,8 +48,8 @@ useMotionValueEvent(scrollY,"change", (latest) => {
     open : {
       width : 380,
       height: 420,
-      top: "-25px",
-      right: "-25px",
+      top: "-15px",
+      right: "-5px",
       transition : {duration : 0.5, ease : [0.76, 0, 0.24, 1]}
     },
     closed : {
@@ -67,13 +67,12 @@ useMotionValueEvent(scrollY,"change", (latest) => {
             <img src={`${process.env.PUBLIC_URL}/Logo-Image.jpg`} alt='logo-image'className='Image'/>
             
             <h1 className='brand-heading'><Link to={"/"}>Ecomm-Web</Link></h1>
-            <div className='list-menu'>
               
-              <div className='cart-btn'>
+              {/* <div className='cart-btn'>
                 <Link to={"/cart"} >
                     <ListMenu className='cart'>Cart</ListMenu>
                 </Link>
-              </div>
+              </div> */}
               <div className='btn-cnt'>
                 <motion.div variants={variants} animate = {isActive ? "open" : "closed"} initial = "closed"  className='background-menu'>
                   <AnimatePresence>
@@ -82,7 +81,6 @@ useMotionValueEvent(scrollY,"change", (latest) => {
                 </motion.div>
                 <Animation label1 = {menu} label2 = {close} isActive = {isActive} setIsActive = {setIsActive}/>
               </div>
-            </div>
         </div>
     </motion.nav>
   )

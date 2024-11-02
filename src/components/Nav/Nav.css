@@ -29,27 +29,42 @@
             list-style: none;
             color: black;
         }
-        .list-menu{
+        /* .list-menu{
             display: flex;
-            align-items: center;
-            justify-content: center;
             gap: 35px;
+            justify-content: space-between;
+            width: 20px;
             cursor: pointer;
             font-size: 15px;
             letter-spacing: 0.8px;
             position: relative;
-            .cart-btn a{
+            .cart a{
                 position: relative;
+                z-index: 100;
                 right: 125px;
                 text-decoration: none;
                 color: black;
                 list-style: none;
                 font-weight: 600;
             }
-        }
+        } */
     }
 }
 
+.btn-cnt{
+    position: relative;
+    top: -10px;
+    right: 0;
+    cursor: pointer;
+    .background-menu{
+        position: absolute;
+        width: 380px;
+        height: 420px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 25px;
+        overflow: hidden;
+    }
+}
 .text-hover{
     position: relative;
     display: block;
@@ -67,19 +82,7 @@
 }
 
 
-.btn-cnt{
-    position: absolute;
-    top: 0;
-    right: 0;
-    .background-menu{
-        position: relative;
-        width: 380px;
-        height: 650px;
-        background-color: rgb(0, 0, 0);
-        border-radius: 25px;
-        overflow: hidden;
-    }
-}
+
 
 .menu-button-container{
     height: 40px;
@@ -185,11 +188,10 @@
             }
         }
     } 
-    .btn-cnt{
+    /* .btn-cnt{
         position: absolute;
         top: -10px;
         right: -25px;
-        /* padding-bottom: 10px; */
         font-size: 12px;
         .background-menu{
             position: relative;
@@ -198,7 +200,22 @@
             background-color: rgb(0, 0, 0);
             border-radius: 25px;
         }
-    } 
+    }  */
+    .btn-cnt{
+        position: relative;
+        top: -10px;
+        right: -25px;
+    cursor: pointer;
+
+        .background-menu{
+            position: absolute;
+            width: 380px;
+            height: 420px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+            overflow: hidden;
+        }
+    }
 }
 
 
@@ -228,7 +245,7 @@
                 font-weight: 600;
                 letter-spacing: 3px;
             }
-            .list-menu{
+            /* .list-menu{
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -246,7 +263,7 @@
                     list-style: none;
                     font-weight: 600;
                 }
-            }
+            } */
         }
     }  
 }
