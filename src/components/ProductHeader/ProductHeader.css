@@ -12,7 +12,7 @@
     position: sticky;
     top: 80px;
     z-index: 100;
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(32, 32, 32);
 }
 
 .input-search {
@@ -33,15 +33,16 @@
     font-weight: 400;
     padding: 12px 20px;
     letter-spacing: 0.8px;
-    border-width: 0;
     border-radius: 8px;
     font-size: 14px;
     font-family: 'Noto Sans', serif;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #000000, #363636);
+    background-color: #000000;
+    /* background: linear-gradient(45deg, #000000, #363636); */
     color: #fff;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
+    border: 1px solid white;
 }
 
 .product-header-ulist .category-button.active-button {

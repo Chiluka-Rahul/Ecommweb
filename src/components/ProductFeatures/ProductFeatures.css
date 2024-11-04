@@ -36,9 +36,9 @@
 .product-features-heading{
     font-size: 25px;
     font-family: "Noto Sans", serif;
-    font-weight: 600;
+    font-weight: 400;
     position: relative;
-    
+    letter-spacing: 0.2rem;
     .mask-1{
         position: relative;
         overflow: hidden;

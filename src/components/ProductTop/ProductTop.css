@@ -23,7 +23,8 @@
 .product-top-heading{
     font-size: 25px;
     font-family: "Noto Sans", serif;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
     padding-bottom: 35px;
     text-transform: uppercase;
     
