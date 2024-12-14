@@ -26,23 +26,21 @@ const Homee = () => {
     <div className="homee">
       <div className='home-first-container'>
         <div  className='image-container'>
-          <AnimatePresence mode='wait'>
 
-          <>
+
           <motion.div initial = {{x : "0%"}} animate = {{x : "100%", transition: {duration: 1.5, ease: [0.65, 0, 0.35, 1]}}} className='imagee'>
           </motion.div>
           <motion.div initial = {{scale : 1.3}} animate = {{scale : 1, transition: {duration: 1.5, ease: [0.65, 0, 0.35, 1]} }}>
             <img src={`${process.env.PUBLIC_URL}/HomeImage.jpg`} alt='image-picture' className='image-1'/>
           </motion.div>
-          </>
+
           
-          </AnimatePresence>
         </div>
         <div className='side-container'> 
           <h1 className='side-heading'>Stand Out with Style</h1>
           <p className='side-paragraph'> Style is more than appearance—it's a language of self-expression, evolving with every trend and season. Whether it’s what you wear, the gadgets you use, or the decor you choose, each choice you make reflects your personality and passions. Embrace a world of products that empower you to be bold, be seen, and be authentically you. Discover something new and exciting every day, and make each choice a true reflection of your individuality.</p>
             <Link  to = "/products">
-              <motion.button className='button-container' initial = {{y : 0}} whileHover={{y: 5}}> Shop Now</motion.button>
+              <button className='button-container'> Shop Now</button>
             </Link>
 
         </div>

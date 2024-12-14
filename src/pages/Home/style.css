@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 main{
     margin: 0;
@@ -14,6 +14,7 @@ main{
     display: flex;
     padding-right: 30px;
     gap: 35px;
+    font-family: "Manrope", sans-serif;
     .side-container{
         overflow-x: hidden;
         padding-top: 20px;
@@ -21,22 +22,21 @@ main{
     .side-heading{
         font-size: 6rem;
         padding-top: 30px;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
         font-optical-sizing: auto;
-        font-weight: 300;
+        font-weight: 350;
         font-style: normal;
         text-transform: uppercase;
         position: relative;
     }
     .side-paragraph{
-        font-family: "Open Sans", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 17px;
         line-height: 1.5rem;
-        color: rgb(151, 152, 152);
+        color: rgb(58, 59, 59);
 
     }
     .button-container{
-        font-family: "Roboto", serif;
         font-weight: 400;
         margin-top: 50px;
         padding: 10px 30px 10px 30px;
@@ -45,8 +45,15 @@ main{
         color: rgb(255, 251, 251);
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.05rem;
         cursor:pointer;
+        transition: border .3s ease-in-out;
+        &:hover{
+            background-color: rgb(255, 251, 251);
+            color: black;
+            border: 3px solid black;
+            transition: border 0.3s ease-in-out;
+        }
     }
 }
 
@@ -63,7 +70,7 @@ main{
     z-index: 100;
     position: absolute;
     top: 0;
-    background-color: #e0e0e0;
+    background-color: #f6f6f6;
 }
 
 .image-1{

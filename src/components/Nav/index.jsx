@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,Fragment } from 'react'
 import {AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useHid } from '../../context/HidContext'
@@ -25,6 +25,16 @@ const ListMenu = ({children}) => {
   )
 }
 
+
+
+const logo = [
+  { id: 1, name: 'ecomm-web'},
+  { id: 2, name: 'ecomm-web'},
+  { id: 3, name: 'ecomm-web'},
+  { id: 4, name: 'ecomm-web'},
+
+
+]
 
 const Nav = () => {
   const { hid } = useHid();
@@ -66,13 +76,34 @@ useMotionValueEvent(scrollY,"change", (latest) => {
         <div className='navigation'>
             <img src={`${process.env.PUBLIC_URL}/Logo-Image.jpg`} alt='logo-image'className='Image'/>
             
-            <h1 className='brand-heading'><Link to={"/"}>Ecomm-Web</Link></h1>
-              
-              {/* <div className='cart-btn'>
-                <Link to={"/cart"} >
-                    <ListMenu className='cart'>Cart</ListMenu>
-                </Link>
-              </div> */}
+            {/* <h1 className='brand-heading'><Link to={"/"}>Ecomm-Web</Link></h1> */}
+
+            <div className='infinite-anim'>
+              <Link to={"/"}>
+                <div className='infinite-container'>
+                  <motion.div
+                    animate = {{
+                      x:"-50%"
+                    }}
+                    transition={{
+                      duration: 40,
+                      ease : 'linear',
+                      repeat : Infinity,
+                    }}
+                    className='bestof-container'>
+                    {Array.from({ length: 2 }).map((_, i) => (
+                      <Fragment key={i}>
+                        {logo.map((item) => (
+                          <h2 key={item.id} className="bestoflist">
+                            {item.name}
+                          </h2>
+                        ))}
+                      </Fragment>
+                    ))}
+                  </motion.div>
+                </div>
+              </Link>
+            </div>
               <div className='btn-cnt'>
                 <motion.div variants={variants} animate = {isActive ? "open" : "closed"} initial = "closed"  className='background-menu'>
                   <AnimatePresence>
